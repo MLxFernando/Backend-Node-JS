@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Book = void 0;
+const mongoose_1 = require("mongoose");
+//Schema Book
+const bookSchema = new mongoose_1.Schema({
+    title: { type: String },
+    dateOfPublication: { type: Date },
+    autor: { type: String },
+    languageNative: { type: String },
+    category: { type: String }
+});
+//Model Book
+const Book = (0, mongoose_1.model)('Book', bookSchema);
+exports.Book = Book;
